@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document states the key design considerations, assumptions, and trade-offs made in implementing this payment gateway solution for the coding challenge. 
+This document states the key design considerations, assumptions made in implementing this payment gateway solution for the coding challenge. 
 
 **Core Functionality:**
 - `POST /payment` - Process a new card payment
@@ -123,3 +123,9 @@ Tests custom validation logic in isolation.
 - Expired card throws `PaymentValidationException`
 
 ---
+
+### Assumptions Made
+ - no thread safety/concurrent handling of requests needed
+ - no rate limiting on incoming requsts
+ - no authorization/authentication needed when connecting to acquiring bank
+
